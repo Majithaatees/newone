@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>All Customers</h1>
+    <table>
+        <tr>
+            <th>No</th>
+            <th>Name</th>
+            <th>Image</th>
+            <th>Actions</th>
+        </tr>
+        {% for i in data1 %}
+        <tr>
+            <td>{{i.id}}</td>
+            <td>{{i.cus_name}}</td>
+            <td><img src="{{i.cus_image}}" alt="no image" style="width: 100px;height: 100px;"></td>
+            <td><a href="view/{{i.id}}"><button>View</button></a>
+                <a href="update/{{i.id}}"><button>Update</button></a>
+                <a href="delete/{{i.id}}"><button>Delete</button></a></td>
+        </tr>
+        {% endfor %}
+    </table>
+    
+    
+    <br>
+    
+</body>
+</html>

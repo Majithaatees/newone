@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Welcome Users</h1>
+    {% if currentuser %}
+    Logined as {{currentuser}} <a href="/userlogout"><button>Logout</button></a><br><br>
+    <a href="/viewproduct"><button>View Products</button></a>
+    <a href="/addproduct"><button>Add Product</button></a>
+    <a href="/viewfav"><button>Viewfav</button></a>
+    {% else %}
+    <a href="/userlogin"><button>Login</button></a>
+    {% endif %}
+</body>
+</html>

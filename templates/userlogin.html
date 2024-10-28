@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>User Login</h1>
+    {% if messages %}
+    {% for i in messages %}
+    <h2 style="color: red;">{{i}}</h2>
+    {% endfor %}
+    {% endif %}
+    <form method="POST">
+        {% csrf_token %}
+
+        <label> Customer Email :</label>
+        <input type="text" name="email"><br><br>
+        <label> Password :</label>
+        <input type="password" name="password"><br><br>
+    
+        <button type="submit">Login</button>
+    </form>
+    Not registered??? register <a href="/userregister">here</a>
+</body>
+</html>

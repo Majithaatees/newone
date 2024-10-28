@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Update </h1>
+    <form method="POST">
+        {% csrf_token %}
+        <label> Customer Name :</label>
+        <input type="text" name="name" value="{{data1.cus_name}}"><br><br>
+        <label> Customer Email :</label>
+        <input type="text" name="email" value="{{data1.cus_email}}"><br><br>
+        <label> Password :</label>
+        <input type="password" name="password" value="{{data1.password}}"><br><br>
+        
+        <label> Customer Age :</label>
+        <input type="text" name="age" value="{{data1.cus_age}}"><br><br>
+        <label> Customer Address :</label>
+        <textarea name="address" cols="30" rows="5">{{data1.cus_address}}</textarea><br><br>
+        <button type="submit">update</button>
+    </form>
+</body>
+</html>
